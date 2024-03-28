@@ -1,0 +1,232 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        position: absolute;
+        max-width: 7rem;
+        animation: bannerImg 2s ease-in-out both;
+
+        &:nth-child(2) {
+            top: 25%;
+            left: 5%;
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            top: 20%;
+            right: 0%;
+            animation-delay: .4s;
+        }
+
+        &:nth-child(4) {
+            bottom: 13%;
+            right: 2%;
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(5) {
+            top: 2%;
+            left: 15%;
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(6) {
+            bottom: 30%;
+            left: 2%;
+            animation-delay: .1s;
+        }
+
+        &:nth-child(7) {
+            top: 50%;
+            right: 5%;
+            animation-delay: .2s;
+        }
+
+        &:nth-child(8) {
+            bottom: 5%;
+            left: 10%;
+            animation-delay: .4s;
+        }
+
+        &:nth-child(9) {
+            top: 2%;
+            left: 50%;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+
+        animation: toTop .5s 1s ease-in-out both;
+
+        img {
+            position: relative;
+            filter: invert(1);
+            animation: none;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+}
+
+@media (min-width:767px) {
+    .banner {
+        img {
+            max-width: 10rem;
+
+            &:nth-child(2) {
+                top: 25%;
+                left: 5%;
+            }
+
+            &:nth-child(3) {
+                top: 10%;
+                right: 0%;
+            }
+
+            &:nth-child(4) {
+                bottom: 6%;
+                right: 2%;
+            }
+
+            &:nth-child(5) {
+                top: 10%;
+                left: 30%;
+            }
+
+            &:nth-child(6) {
+                bottom: 20%;
+                left: 2%;
+            }
+
+            &:nth-child(7) {
+                top: 70%;
+                left: 55%;
+            }
+
+            &:nth-child(8) {
+                bottom: 2%;
+                left: 20%;
+            }
+
+            &:nth-child(9) {
+                top: 30%;
+                left: 55%;
+            }
+        }
+
+    }
+}
+
+@media (min-width:1023px) {
+    .banner {
+        img {
+            max-width: 14rem;
+
+            &:nth-child(2) {
+                top: 15%;
+                left: 5%;
+
+            }
+
+            &:nth-child(3) {
+                top: 10%;
+                right: 2%;
+            }
+
+            &:nth-child(4) {
+                bottom: 3%;
+                right: 2%;
+            }
+
+            &:nth-child(5) {
+                top: 2%;
+                left: 25%;
+
+            }
+
+            &:nth-child(6) {
+                bottom: 30%;
+                left: 2%;
+            }
+
+            &:nth-child(7) {
+                bottom: 20%;
+                left: 50%;
+
+            }
+
+            &:nth-child(8) {
+                bottom: 5%;
+                left: 20%;
+            }
+
+            &:nth-child(9) {
+                top: 5%;
+                right: 25%;
+            }
+        }
+
+    }
+}
+
+@media (min-width:1439px) {
+    .banner {
+        img {
+            max-width: 18rem;
+
+            &:nth-child(2) {
+                top: 15%;
+                left: 5%;
+            }
+
+            &:nth-child(3) {
+                top: 10%;
+                right: 1%;
+            }
+
+            &:nth-child(4) {
+                bottom: 3%;
+                right: 2%;
+            }
+
+            &:nth-child(5) {
+                top: 2%;
+                left: 35%;
+            }
+
+            &:nth-child(6) {
+                bottom: 30%;
+                left: 2%;
+            }
+
+            &:nth-child(7) {
+                bottom: 30%;
+                left: 50%;
+            }
+
+            &:nth-child(8) {
+                bottom: 2%;
+                left: 20%;
+            }
+
+            &:nth-child(9) {
+                top: 10%;
+                left: 57%;
+            }
+
+        }
+
+    }
+}

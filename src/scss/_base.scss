@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Telex";
+    src: url('/fonts/Telex-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Rail";
+    src: url('/fonts/Rail-Regular.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    background: var(--bg-dark);
+    color: var(--white);
+    font-family: 'Telex', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    display: flex;
+}
+
+h1,h2,h3,h4{
+    text-wrap: balance;
+    font-family: 'Rail', sans-serif;
+}
+p, span{
+    text-wrap: pretty;
+    max-width: 600px;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.container{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+.items-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.absolute{
+    position: absolute;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.btn{
+    padding: 1rem 2.5rem;
+    border: 1px solid transparent;
+    background-color: none;
+    cursor: pointer;
+    &-primary{
+        background-color: var(--primary);
+        color: var(--white);
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color .3s ease-in-out;
+        &:hover{
+            background-color: var(--primary-accent);
+        }
+    }
+}

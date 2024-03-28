@@ -1,0 +1,101 @@
+<section class="banner">
+    <div class="banner__content flex flex-column items-center ">
+        <img src="/images/logo.png" alt="Logo de Rubí Beauty Salon">
+        <h2 class="uppercase">Beauty Studio</h2>
+    </div>
+    <img
+        src="/images/1.png"
+        loading="eager"
+        decoding="async"
+        data-speed="2"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/2.png"
+        loading="eager"
+        decoding="async"
+        data-speed="1"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/3.png"
+        loading="eager"
+        decoding="async"
+        data-speed="3"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/4.png"
+        loading="eager"
+        decoding="async"
+        data-speed="2"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/5.png"
+        loading="eager"
+        decoding="async"
+        data-speed="-3"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/6.png"
+        loading="eager"
+        decoding="async"
+        data-speed="-2"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/7.png"
+        loading="eager"
+        decoding="async"
+        data-speed="1"
+        class="layer"
+        aria-hidden="true"
+    />
+    <img
+        src="/images/8.png"
+        loading="eager"
+        decoding="async"
+        data-speed="-1"
+        class="layer"
+        aria-hidden="true"
+    />
+</section>
+
+<script>
+    document.addEventListener("mousemove", parallax);
+
+    function parallax(e: MouseEvent) {
+        document.querySelectorAll(".layer").forEach((layer) => {
+            const speed = layer.getAttribute("data-speed");
+
+            if (speed) {
+                let x = (window.innerWidth - e.pageX * parseInt(speed)) / 100;
+                let y = (window.innerHeight - e.pageY * parseInt(speed)) / 100;
+
+                let layerElement = layer as HTMLElement;
+                layerElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
+                layerElement.style.transition = "transform 0.1s ease-in-out";
+            }
+        });
+    }
+
+    function handleAnimationEnd() {
+        document.querySelectorAll(".layer").forEach((layer) => {
+            let layerEl = layer as HTMLElement;
+            layerEl.style.animation = "none";
+        });
+        document.addEventListener("mousemove", parallax);
+    }
+
+    document
+        .querySelector(".banner")
+        ?.addEventListener("animationend", handleAnimationEnd);
+</script>
