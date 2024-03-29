@@ -1,9 +1,19 @@
 .service {
-    .number {
-        font-size: 5rem;
+    span{
+        width: 100%;
+    }
+    svg{
+        fill: none;
+        stroke: var(--primary);
+        stroke-width: 2;
+        stroke-dasharray: 100%;
+        stroke-dashoffset: 100%;
         font-family: 'Rail', sans-serif;
-        -webkit-text-stroke: 3px var(--white);
-        -webkit-text-fill-color: transparent;
+
+        text{
+            font-size: 5rem;
+        }
+        #md{display: none;}
     }
 
     h1 {
@@ -42,8 +52,17 @@
     }
 }
 
-@media (width>767px) {
-
+@mixin services-767 {
+    .service{
+        svg{
+            #sm{
+                display: none;
+            }
+            #md{
+                display: block;
+            }
+        }
+    }
     .design-1,
     .design-2,
     .design-4,
@@ -92,7 +111,7 @@
 
 }
 
-@media (width>1023px) {
+@mixin services-1023 {
     .service {
         .number {
             position: absolute;
@@ -112,9 +131,10 @@
 
         &__content {
             text-align: left;
+
             h1 {
                 position: absolute;
-                top: 7rem;
+                top: 7.5rem;
                 left: 0;
             }
 
@@ -218,13 +238,16 @@
         }
     }
 
+    .design-5 {
+        .container>.flex {
+            justify-content: space-between;
+        }
+    }
+
 }
 
-@media (width>1439px) {
+@mixin services-1439 {
     .service {
-        .number {
-            font-size: 7rem;
-        }
 
         h1 {
             font-size: 5rem;
@@ -237,13 +260,13 @@
     .design-8,
     .design-9 {
 
-        .container>.justify-center {
+        .container>.flex {
             justify-content: space-between;
         }
 
         &__content {
             h1 {
-                top: 10rem;
+                top: 8rem;
             }
 
             p {

@@ -11,10 +11,14 @@ import SpaPedicure from "../components/SpaPedicure.astro";
 import ClinicPedicure from "../components/ClinicPedicure.astro";
 import Acripie from "../components/Acripie.astro";
 import EyelashExtensions from "../components/EyelashExtensions.astro";
+import LiftingBotox from "../components/LiftingBotox.astro";
+import EyebrowWaxing from "../components/EyebrowWaxing.astro";
+import EyebrowDesign from "../components/EyebrowDesign.astro";
+import Straightening from "../components/Straightening.astro";
+import RelaxingMassages from "../components/RelaxingMassages.astro";
 ---
 
 <Layout title="Rubí Store | Inicio">
-	<main>
 		<Header />
 		<Banner />
 		<main>
@@ -28,7 +32,18 @@ import EyelashExtensions from "../components/EyelashExtensions.astro";
 			<ClinicPedicure/>
 			<Acripie/>
 			<EyelashExtensions/>
+			<LiftingBotox/>
+			<EyebrowWaxing/>
+			<EyebrowDesign/>
+			<Straightening/>
+			<RelaxingMassages/>
 		</main>
-		<div style="height:2000px"></div>
-	</main>
+		<footer>
+			<div class="container">
+				<div class="flex items-center justify-between">
+					<small>&copy;Copyright. Todos los derechos reservados.</small>
+					<small>Diseñado y desarrollado por <a href="https://www.mrubi.dev/" target="_blank">Marcos Rubí</a> </small>
+				</div>
+			</div>
+		</footer>
 </Layout>

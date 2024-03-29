@@ -1,0 +1,16 @@
+@media (min-width:767px) {
+    @include banner-767;
+    @include services-767;
+    @include base-767;
+}
+
+@media (min-width:1023px) {
+    @include banner-1023;
+    @include services-1023;
+    @include base-1023;
+}
+@media (min-width:1439px){
+    @include banner-1439;
+    @include services-1439;
+    @include base-1439;
+}

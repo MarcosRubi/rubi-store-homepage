@@ -10,48 +10,40 @@
     img {
         position: absolute;
         max-width: 7rem;
-        animation: bannerImg 2s ease-in-out both;
 
         &:nth-child(2) {
             top: 25%;
             left: 5%;
-            animation-delay: 0.2s;
         }
 
         &:nth-child(3) {
             top: 20%;
             right: 0%;
-            animation-delay: .4s;
         }
 
         &:nth-child(4) {
             bottom: 13%;
             right: 2%;
-            animation-delay: 0.6s;
         }
 
         &:nth-child(5) {
             top: 2%;
             left: 15%;
-            animation-delay: 0.5s;
         }
 
         &:nth-child(6) {
             bottom: 30%;
             left: 2%;
-            animation-delay: .1s;
         }
 
         &:nth-child(7) {
             top: 50%;
             right: 5%;
-            animation-delay: .2s;
         }
 
         &:nth-child(8) {
             bottom: 5%;
             left: 10%;
-            animation-delay: .4s;
         }
 
         &:nth-child(9) {
@@ -65,12 +57,10 @@
         z-index: 10;
         text-align: center;
 
-        animation: toTop .5s 1s ease-in-out both;
 
         img {
             position: relative;
             filter: invert(1);
-            animation: none;
         }
 
         h1 {
@@ -80,7 +70,7 @@
 
 }
 
-@media (min-width:767px) {
+@mixin banner-767 {
     .banner {
         img {
             max-width: 10rem;
@@ -129,7 +119,7 @@
     }
 }
 
-@media (min-width:1023px) {
+@mixin banner-1023 {
     .banner {
         img {
             max-width: 14rem;
@@ -181,7 +171,7 @@
     }
 }
 
-@media (min-width:1439px) {
+@mixin banner-1439 {
     .banner {
         img {
             max-width: 18rem;

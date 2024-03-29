@@ -3,7 +3,6 @@
     width: 100vw;
     padding: .5rem 0;
     z-index: 999;
-    animation: toBottom .5s ease-in-out both;
 
     &::after {
         content: '';
@@ -14,16 +13,11 @@
         height: 100%;
         z-index: -1;
 
-        background: rgba(62, 19, 180, 0.85);
+        background: var(--primary);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(12.5px);
         -webkit-backdrop-filter: blur(22.5px);
         border: 1px solid rgba(34, 25, 163, 0.78);
-
-        animation: menu 1s ease-in-out both;
-        animation-timeline: scroll(root);
-        animation-range: 0 150px;
-        animation-fill-mode: both;
     }
 
     .logo {
@@ -39,7 +33,7 @@
 
         .badge {
             display: inline-block;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             border-radius: 50%;
             text-align: center;
             padding: 0.15rem .5rem;

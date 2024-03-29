@@ -44,6 +44,9 @@ h1{
     &.title{
         margin-top: 6rem;
     }
+    span{
+        color: var(--primary);
+    }
 }
 p,
 span {
@@ -111,7 +114,7 @@ a {
 
     &-primary {
         color: var(--white);
-        border: 2px solid var(--white);
+        border: 2px solid var(--primary);
         font-weight: bold;
         position: relative;
 
@@ -119,6 +122,7 @@ a {
             position: relative;
             z-index: 10;
             transition: color .3s ease-in-out;
+            font-size: 1.15rem;
         }
 
         &::after {
@@ -129,14 +133,10 @@ a {
             height: 100%;
             width: 0;
             transition: .3s ease-in-out;
-            background-color: var(--white);
+            background-color: var(--primary);
         }
 
         &:hover {
-            span {
-                color: var(--bg-dark);
-            }
-
             &::after {
                 width: 100%;
             }
@@ -148,7 +148,7 @@ section.service{
     padding: 6rem 0;
 }
 
-@media (width>767px) {
+@mixin base-767 {
     .flex-column-sm{
         flex-direction: row;
     }
@@ -156,7 +156,7 @@ section.service{
         text-align: start;
     }
 }
-@media (width>1023px) {
+@mixin base-1023 {
     h1{
         &.title{
             margin-top: 10rem;
@@ -167,7 +167,7 @@ section.service{
         font-size: 1.25rem;
     }
 }
-@media (width>1439px) {
+@mixin base-1439 {
     h1{
         &.title{
             font-size: 5rem;

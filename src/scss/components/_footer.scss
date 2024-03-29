@@ -1,0 +1,22 @@
+footer{
+    padding: 1.5rem 0;
+    background-color: var(--primary);
+    a{
+        color: #ff7e7c;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            transform: translate(-50%, 0%);
+            background: #ff7e7c;
+            bottom: -3px;
+            left: 50%;
+            transition: all .3s ease-in-out;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
+}
