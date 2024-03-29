@@ -163,6 +163,9 @@ section.service {
     margin-top: 10rem;
     font-size: 3rem;
   }
+  p {
+    font-size: 1.25rem;
+  }
 }
 @media (width > 1439px) {
   h1.title {
@@ -401,62 +404,70 @@ section.service {
 .service h1 {
   margin: 0;
   max-width: 30ch;
+  z-index: 10;
 }
 .service p {
   margin: 1rem 0;
 }
 
-.acrylic-nails,
-.gel-x,
-.gel-x-removal,
-.pedicure {
+.design-1,
+.design-2,
+.design-4,
+.design-5,
+.design-8,
+.design-9 {
   padding: 1rem 0;
 }
-.acrylic-nails .flex,
-.gel-x .flex,
-.gel-x-removal .flex,
-.pedicure .flex {
+.design-1 .flex,
+.design-2 .flex,
+.design-4 .flex,
+.design-5 .flex,
+.design-8 .flex,
+.design-9 .flex {
   gap: 1rem;
 }
 
-.semipermant-nail-polish h1,
-.spa-pedicure h1,
-.clinic-pedicure h1 {
+.design-3 h1,
+.design-6 h1,
+.design-7 h1 {
   margin: 0 auto;
 }
-.semipermant-nail-polish img,
-.spa-pedicure img,
-.clinic-pedicure img {
+.design-3 img,
+.design-6 img,
+.design-7 img {
   margin-top: 2rem;
 }
 
 @media (width > 767px) {
-  .acrylic-nails__content,
-  .gel-x__content,
-  .gel-x-removal__content {
+  .design-1__content,
+  .design-2__content,
+  .design-4__content,
+  .design-8__content,
+  .design-9__content {
     align-items: self-start;
   }
-  .gel-x .container > div,
-  .pedicure .container > div {
+  .design-2 .container > div,
+  .design-5 .container > div,
+  .design-9 .container > div {
     flex-direction: row-reverse;
   }
-  .pedicure__content {
+  .design-5__content {
     align-items: flex-start;
   }
-  .spa-pedicure .content,
-  .clinic-pedicure .content {
+  .design-6 .content,
+  .design-7 .content {
     gap: 2rem;
   }
-  .spa-pedicure__content,
-  .clinic-pedicure__content {
+  .design-6__content,
+  .design-7__content {
     flex-grow: 1;
     text-align: left;
   }
-  .spa-pedicure__img,
-  .clinic-pedicure__img {
+  .design-6__img,
+  .design-7__img {
     flex-basis: 70%;
   }
-  .clinic-pedicure .content {
+  .design-7 .content {
     flex-direction: row-reverse;
   }
 }
@@ -468,20 +479,43 @@ section.service {
   .service h1 {
     font-size: 3.5rem;
   }
-  .acrylic-nails__content h1,
-  .gel-x__content h1,
-  .gel-x-removal__content h1 {
-    position: absolute;
-    top: 8rem;
+  .design-1__content,
+  .design-2__content,
+  .design-4__content,
+  .design-8__content,
+  .design-9__content {
+    text-align: left;
   }
-  .gel-x__img,
-  .gel-x-removal__img,
-  .pedicure__img {
+  .design-1__content h1,
+  .design-2__content h1,
+  .design-4__content h1,
+  .design-8__content h1,
+  .design-9__content h1 {
+    position: absolute;
+    top: 7rem;
+    left: 0;
+  }
+  .design-1__content p,
+  .design-2__content p,
+  .design-4__content p,
+  .design-8__content p,
+  .design-9__content p {
+    margin-top: 10rem;
+  }
+  .design-1__img,
+  .design-2__img,
+  .design-4__img,
+  .design-5__img,
+  .design-8__img,
+  .design-9__img {
     position: relative;
   }
-  .gel-x__img::after,
-  .gel-x-removal__img::after,
-  .pedicure__img::after {
+  .design-1__img::after,
+  .design-2__img::after,
+  .design-4__img::after,
+  .design-5__img::after,
+  .design-8__img::after,
+  .design-9__img::after {
     content: "";
     position: absolute;
     top: 0;
@@ -490,47 +524,49 @@ section.service {
     height: 100%;
     z-index: 0;
   }
-  .gel-x .number,
-  .pedicure .number {
+  .design-2 .number,
+  .design-5 .number,
+  .design-9 .number {
     right: 0;
   }
-  .gel-x__content h1,
-  .pedicure__content h1 {
+  .design-2__content h1,
+  .design-5__content h1,
+  .design-9__content h1 {
     left: 44%;
-    z-index: 10;
   }
-  .gel-x__img::after,
-  .pedicure__img::after {
+  .design-2__img::after,
+  .design-5__img::after,
+  .design-9__img::after {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
-  .semipermant-nail-polish .number {
+  .design-3 .number {
     position: relative;
   }
-  .semipermant-nail-polish img {
+  .design-3 img {
     width: 100%;
     max-height: 60vh;
     object-fit: cover;
     overflow: hidden;
   }
-  .gel-x-removal__content h1,
-  .pedicure__content h1 {
+  .design-4__content h1,
+  .design-5__content h1 {
     position: absolute;
     top: 0;
     left: 60%;
     width: 85%;
     transform: translateX(-50%);
-    z-index: 10;
   }
-  .gel-x-removal__img::after,
-  .pedicure__img::after {
+  .design-4__img::after,
+  .design-5__img::after {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
-  .pedicure__content h1 {
-    right: 0%;
-  }
-  .spa-pedicure .number,
-  .clinic-pedicure .number {
+  .design-6 .number,
+  .design-7 .number {
     position: relative;
+  }
+  .design-1__img::after,
+  .design-8__img::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
 }
 @media (width > 1439px) {
@@ -540,41 +576,51 @@ section.service {
   .service h1 {
     font-size: 5rem;
   }
-  .acrylic-nails .container > .justify-center,
-  .gel-x .container > .justify-center,
-  .gel-x-removal .container > .justify-center {
+  .design-1 .container > .justify-center,
+  .design-2 .container > .justify-center,
+  .design-4 .container > .justify-center,
+  .design-8 .container > .justify-center,
+  .design-9 .container > .justify-center {
     justify-content: space-between;
   }
-  .acrylic-nails__content h1,
-  .gel-x__content h1,
-  .gel-x-removal__content h1 {
+  .design-1__content h1,
+  .design-2__content h1,
+  .design-4__content h1,
+  .design-8__content h1,
+  .design-9__content h1 {
     top: 10rem;
   }
-  .acrylic-nails__content p,
-  .gel-x__content p,
-  .gel-x-removal__content p {
+  .design-1__content p,
+  .design-2__content p,
+  .design-4__content p,
+  .design-8__content p,
+  .design-9__content p {
     margin-top: 10rem;
   }
-  .semipermant-nail-polish p {
+  .design-3 p {
     margin: 2rem 0;
   }
-  .gel-x__img::after {
+  .design-2__img::after,
+  .design-9__img::after {
     background: none;
   }
-  .gel-x__content,
-  .pedicure__content {
+  .design-2__content,
+  .design-5__content,
+  .design-9__content {
     align-items: end;
     text-align: end;
   }
-  .gel-x__content h1,
-  .pedicure__content h1 {
+  .design-2__content h1,
+  .design-5__content h1,
+  .design-9__content h1 {
     left: 43%;
   }
-  .gel-x__content p,
-  .pedicure__content p {
+  .design-2__content p,
+  .design-5__content p,
+  .design-9__content p {
     margin-top: 10rem;
   }
-  .gel-x-removal__content h1 {
+  .design-4__content h1 {
     top: 0;
   }
 }
