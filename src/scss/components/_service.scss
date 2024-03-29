@@ -1,27 +1,25 @@
-.acrylic-nails,
-.gel-x {
-    padding: 1rem 0;
-
-    .flex {
-        gap: 1rem;
-    }
-
+.service{
     .number {
         font-size: 5rem;
         font-family: 'Rail', sans-serif;
         -webkit-text-stroke: 3px var(--white);
         -webkit-text-fill-color: transparent;
     }
+    h1 {
+        margin: 0;
+        max-width: 30ch;
+    }
 
-    &__content {
-        h1 {
-            margin: 0;
-            max-width: 30ch;
-        }
+    p {
+        margin: 1rem 0;
+    }
+}
+.acrylic-nails,
+.gel-x {
+    padding: 1rem 0;
 
-        p {
-            margin: 1rem 0;
-        }
+    .flex {
+        gap: 1rem;
     }
 }
 
@@ -37,17 +35,21 @@
 }
 
 @media (width>1023px) {
-    .acrylic-nails,
-    .gel-x {
+    .service{
         .number {
             position: absolute;
             top: 0;
         }
-
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+    .acrylic-nails,
+    .gel-x {
+        
         &__content {
             h1{
                 position: absolute;
-                font-size: 3.5rem;
                 top: 8rem;
             }
         }
@@ -55,18 +57,23 @@
 
 }
 @media (width>1439px) {
-    .acrylic-nails,
-    .gel-x {
+    .service{
         .number {
             font-size: 7rem;
         }
+        h1{
+            font-size: 5rem;
+        }
+    }
+    .acrylic-nails,
+    .gel-x {
+        
         .container > .justify-center{
             justify-content: space-between;
         }
 
         &__content {
             h1{
-                font-size: 5rem;
                 top: 10rem;
             }
             p{

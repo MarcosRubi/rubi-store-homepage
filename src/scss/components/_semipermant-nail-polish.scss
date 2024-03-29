@@ -1,0 +1,16 @@
+.semipermant-nail-polish{
+    h1{
+        margin: 0 auto;
+    }
+    img{
+        margin-top: 2rem;
+    }
+}
+
+@media (width>1023px) {
+    .semipermant-nail-polish{
+        .number {
+            position: relative;
+        }
+    }
+}
