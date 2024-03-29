@@ -1,4 +1,5 @@
-.acrilicas {
+.acrylic-nails,
+.gel-x {
     padding: 1rem 0;
 
     .flex {
@@ -26,7 +27,8 @@
 
 @media (width>767px) {
 
-    .acrilicas {
+    .acrylic-nails,
+    .gel-x {
         &__content {
             align-items: self-start;
         }
@@ -35,7 +37,8 @@
 }
 
 @media (width>1023px) {
-    .acrilicas {
+    .acrylic-nails,
+    .gel-x {
         .number {
             position: absolute;
             top: 0;
@@ -52,7 +55,8 @@
 
 }
 @media (width>1439px) {
-    .acrilicas {
+    .acrylic-nails,
+    .gel-x {
         .number {
             font-size: 7rem;
         }

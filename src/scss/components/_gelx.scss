@@ -1,0 +1,43 @@
+@media (width>767px) {
+    .gel-x {
+        .container>div {
+            flex-direction: row-reverse;
+        }
+
+    }
+
+}
+
+@media (width>1023px) {
+    .gel-x {
+        .number {
+            right: 0;
+        }
+
+        &__content {
+            h1 {
+                left: 45%;
+            }
+        }
+
+    }
+
+}
+
+@media (width>1439px) {
+    .gel-x {
+        &__content {
+            align-items: end;
+            text-align: end;
+
+            h1 {
+                left: 43%;
+            }
+
+            p {
+                margin-top: 10rem;
+            }
+        }
+    }
+
+}
