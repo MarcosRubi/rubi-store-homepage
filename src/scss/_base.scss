@@ -5,6 +5,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: "Rail";
     src: url('/fonts/Rail-Regular.otf') format('opentype');
@@ -12,7 +13,8 @@
     font-style: normal;
     font-display: swap;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,72 +27,147 @@ html {
     font-family: 'Telex', sans-serif;
 }
 
-img{
+img {
     max-width: 100%;
     display: flex;
 }
 
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
     text-wrap: balance;
     font-family: 'Rail', sans-serif;
 }
-p, span{
-    text-wrap: pretty;
-    max-width: 600px;
+h1{
+    margin: 2rem 0;
+    &.title{
+        margin-top: 6rem;
+    }
 }
-a{
+p,
+span {
+    text-wrap: pretty;
+    max-width: 50ch;
+}
+
+a {
     text-decoration: none;
     color: var(--white);
 }
-
-.container{
+.text-center, 
+.text-center-sm{
+    text-align: center;
+}
+.container {
     width: 90%;
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
 }
 
-.flex{
+.flex {
     display: flex;
 }
-.items-center{
+
+.items-center {
     align-items: center;
 }
-.justify-between{
+
+.justify-between {
     justify-content: space-between;
 }
-.justify-center{
+
+.justify-center {
     justify-content: center;
 }
-.absolute{
+
+.absolute {
     position: absolute;
 }
-.flex-column{
+
+.flex-column,
+.flex-column-sm {
     flex-direction: column;
 }
-.flex-wrap{
+
+.flex-wrap {
     flex-wrap: wrap;
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
-.btn{
+.btn {
     padding: 1rem 2.5rem;
     border: 1px solid transparent;
-    background-color: none;
+    background-color: transparent;
     cursor: pointer;
-    &-primary{
-        background-color: var(--primary);
+
+    &-primary {
         color: var(--white);
+        border: 2px solid var(--white);
         font-weight: bold;
-        text-transform: uppercase;
-        transition: background-color .3s ease-in-out;
-        &:hover{
-            background-color: var(--primary-accent);
+        position: relative;
+
+        span {
+            position: relative;
+            z-index: 10;
+            transition: color .3s ease-in-out;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            transition: .3s ease-in-out;
+            background-color: var(--white);
+        }
+
+        &:hover {
+            span {
+                color: var(--bg-dark);
+            }
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+section.service{
+    padding: 6rem 0;
+}
+
+@media (width>767px) {
+    .flex-column-sm{
+        flex-direction: row;
+    }
+    .text-center-sm{
+        text-align: start;
+    }
+}
+@media (width>1023px) {
+    h1{
+        &.title{
+            margin-top: 10rem;
+            font-size: 3rem;
+        }
+    }
+}
+@media (width>1439px) {
+    h1{
+        &.title{
+            font-size: 5rem;
         }
     }
 }

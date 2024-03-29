@@ -1,14 +1,18 @@
 ---
-import Banner from '../components/Banner.astro';
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
+import Banner from "../components/Banner.astro";
+import Header from "../components/Header.astro";
+import Service from "../components/Service.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Rubí Store | Inicio">
 	<main>
-		<Header/>
-		<Banner/>
+		<Header />
+		<Banner />
+		<main>
+			<h1 class="title text-center">Descubre Nuestros Servicios de Belleza</h1>
+			<Service />
+		</main>
 		<div style="height:2000px"></div>
 	</main>
 </Layout>
-

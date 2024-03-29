@@ -1,0 +1,74 @@
+.acrilicas {
+    padding: 1rem 0;
+
+    .flex {
+        gap: 1rem;
+    }
+
+    .number {
+        font-size: 5rem;
+        font-family: 'Rail', sans-serif;
+        -webkit-text-stroke: 3px var(--white);
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__content {
+        h1 {
+            margin: 0;
+            max-width: 30ch;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+    }
+}
+
+@media (width>767px) {
+
+    .acrilicas {
+        &__content {
+            align-items: self-start;
+        }
+    }
+
+}
+
+@media (width>1023px) {
+    .acrilicas {
+        .number {
+            position: absolute;
+            top: 0;
+        }
+
+        &__content {
+            h1{
+                position: absolute;
+                font-size: 3.5rem;
+                top: 8rem;
+            }
+        }
+    }
+
+}
+@media (width>1439px) {
+    .acrilicas {
+        .number {
+            font-size: 7rem;
+        }
+        .container > .justify-center{
+            justify-content: space-between;
+        }
+
+        &__content {
+            h1{
+                font-size: 5rem;
+                top: 10rem;
+            }
+            p{
+                margin-top: 10rem;
+            }
+        }
+    }
+
+}

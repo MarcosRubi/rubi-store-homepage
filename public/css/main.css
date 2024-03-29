@@ -37,14 +37,25 @@ img {
   display: flex;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
   font-family: "Rail", sans-serif;
 }
 
-p, span {
+h1 {
+  margin: 2rem 0;
+}
+h1.title {
+  margin-top: 6rem;
+}
+
+p,
+span {
   text-wrap: pretty;
-  max-width: 600px;
+  max-width: 50ch;
 }
 
 a {
@@ -52,10 +63,16 @@ a {
   color: var(--white);
 }
 
+.text-center,
+.text-center-sm {
+  text-align: center;
+}
+
 .container {
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 .flex {
@@ -78,7 +95,8 @@ a {
   position: absolute;
 }
 
-.flex-column {
+.flex-column,
+.flex-column-sm {
   flex-direction: column;
 }
 
@@ -97,20 +115,60 @@ a {
 .btn {
   padding: 1rem 2.5rem;
   border: 1px solid transparent;
-  background-color: none;
+  background-color: transparent;
   cursor: pointer;
 }
 .btn-primary {
-  background-color: var(--primary);
   color: var(--white);
+  border: 2px solid var(--white);
   font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease-in-out;
+  position: relative;
 }
-.btn-primary:hover {
-  background-color: var(--primary-accent);
+.btn-primary span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease-in-out;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  transition: 0.3s ease-in-out;
+  background-color: var(--white);
+}
+.btn-primary:hover span {
+  color: var(--bg-dark);
+}
+.btn-primary:hover::after {
+  width: 100%;
 }
 
+section.service {
+  padding: 6rem 0;
+}
+
+@media (width > 767px) {
+  .flex-column-sm {
+    flex-direction: row;
+  }
+  .text-center-sm {
+    text-align: start;
+  }
+}
+@media (width > 1023px) {
+  h1.title {
+    margin-top: 10rem;
+    font-size: 3rem;
+  }
+}
+@media (width > 1439px) {
+  h1.title {
+    font-size: 5rem;
+  }
+}
 .header-menu {
   position: fixed;
   width: 100vw;
@@ -329,6 +387,57 @@ a {
   .banner img:nth-child(9) {
     top: 10%;
     left: 57%;
+  }
+}
+.acrilicas {
+  padding: 1rem 0;
+}
+.acrilicas .flex {
+  gap: 1rem;
+}
+.acrilicas .number {
+  font-size: 5rem;
+  font-family: "Rail", sans-serif;
+  -webkit-text-stroke: 3px var(--white);
+  -webkit-text-fill-color: transparent;
+}
+.acrilicas__content h1 {
+  margin: 0;
+  max-width: 30ch;
+}
+.acrilicas__content p {
+  margin: 1rem 0;
+}
+
+@media (width > 767px) {
+  .acrilicas__content {
+    align-items: self-start;
+  }
+}
+@media (width > 1023px) {
+  .acrilicas .number {
+    position: absolute;
+    top: 0;
+  }
+  .acrilicas__content h1 {
+    position: absolute;
+    font-size: 3.5rem;
+    top: 8rem;
+  }
+}
+@media (width > 1439px) {
+  .acrilicas .number {
+    font-size: 7rem;
+  }
+  .acrilicas .container > .justify-center {
+    justify-content: space-between;
+  }
+  .acrilicas__content h1 {
+    font-size: 5rem;
+    top: 10rem;
+  }
+  .acrilicas__content p {
+    margin-top: 10rem;
   }
 }
 @keyframes bannerImg {
