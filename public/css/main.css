@@ -147,6 +147,10 @@ a {
   width: 100%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 section.service {
   padding: 6rem 0;
 }
@@ -377,6 +381,14 @@ footer a:hover::before {
     stroke-dashoffset: 0%;
   }
 }
+@keyframes revealToBottom {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
 .header-menu {
   animation: toBottom 0.5s ease-in-out both;
 }
@@ -418,11 +430,61 @@ footer a:hover::before {
   animation: none;
 }
 
-.service svg {
+.service .number {
+  opacity: 0;
+}
+.service .number.visible {
+  opacity: 1;
+}
+.service .number.visible svg {
   animation: textStrokeAnim 2s linear both;
   animation-iteration-count: 1;
 }
 
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+.reveal::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-dark);
+}
+.reveal.visible {
+  opacity: 1;
+}
+.reveal.visible::before {
+  opacity: 1;
+  animation: revealToBottom 1s linear both;
+}
+
+.reveal-to-bottom::before {
+  bottom: 0;
+}
+
+.reveal-to-top::before {
+  top: 0;
+}
+
+h1, p, button, .number {
+  animation: linear both fadein;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+  animation-fill-mode: both;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    scale: 0.75;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 @media (min-width: 767px) {
   .banner img {
     max-width: 10rem;

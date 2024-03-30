@@ -59,3 +59,12 @@
         stroke-dashoffset: 0%;
     }
 }
+@keyframes revealToBottom {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0%;
+    }
+}
