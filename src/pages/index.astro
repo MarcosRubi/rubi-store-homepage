@@ -1,49 +1,133 @@
 ---
-import Banner from "../components/Banner.astro";
-import Header from "../components/Header.astro";
-import AcrylicNails from "../components/AcrylicNails.astro";
 import Layout from "../layouts/Layout.astro";
-import GelX from "../components/GelX.astro";
-import SemipermanentNailPolish from "../components/SemipermanentNailPolish.astro";
-import GelXRemoval from "../components/GelXRemoval.astro";
-import Pedicure from "../components/Pedicure.astro";
-import SpaPedicure from "../components/SpaPedicure.astro";
-import ClinicPedicure from "../components/ClinicPedicure.astro";
-import Acripie from "../components/Acripie.astro";
-import EyelashExtensions from "../components/EyelashExtensions.astro";
-import LiftingBotox from "../components/LiftingBotox.astro";
-import EyebrowWaxing from "../components/EyebrowWaxing.astro";
-import EyebrowDesign from "../components/EyebrowDesign.astro";
-import Straightening from "../components/Straightening.astro";
-import RelaxingMassages from "../components/RelaxingMassages.astro";
+import Header from "../components/Header.astro";
+import Banner from "../components/Banner.astro";
+import Design1 from "../components/Design-1.astro";
+import Design2 from "../components/Design-2.astro";
+import Design3 from "../components/Design-3.astro";
+import Design4 from "../components/Design-4.astro";
+import Design5 from "../components/Design-5.astro";
+import Design6 from "../components/Design-6.astro";
+import Design7 from "../components/Design-7.astro";
 ---
 
 <Layout title="Rubí Store | Inicio">
-		<Header />
-		<Banner />
-		<main>
-			<h1 class="title text-center">Descubre Nuestros Servicios de Belleza</h1>
-			<AcrylicNails />
-			<GelX />
-			<SemipermanentNailPolish />
-			<GelXRemoval/>
-			<Pedicure/>
-			<SpaPedicure/>
-			<ClinicPedicure/>
-			<Acripie/>
-			<EyelashExtensions/>
-			<LiftingBotox/>
-			<EyebrowWaxing/>
-			<EyebrowDesign/>
-			<Straightening/>
-			<RelaxingMassages/>
-		</main>
-		<footer>
-			<div class="container">
-				<div class="flex flex-column-sm  items-center justify-between">
-					<small>&copy;Copyright. Todos los derechos reservados.</small>
-					<small>Diseñado y desarrollado por <a href="https://www.mrubi.dev/" target="_blank">Marcos Rubí</a> </small>
-				</div>
+	<Header />
+	<Banner />
+	<main>
+		<h1 class="title text-center">
+			Descubre Nuestros Servicios de Belleza
+		</h1>
+		<Design1
+			id={1}
+			title="<span>Uñas Acrílicas:</span> Diseños Impresionantes para Tus Manos"
+			description="Descubre nuestra gama de servicios de uñas acrílicas, desde clásicos elegantes hasta diseños únicos y vanguardistas. ¡Resalta tu estilo con nuestras técnicas de última generación!"
+			image="acrilicas"
+			animation="bottom"
+		/>
+		<Design2
+			id={2}
+			title="<span>GelX:</span> Durabilidad y Brillo para Tus Uñas"
+			description="Con nuestro servicio de GelX, obtén unas uñas impecables con una durabilidad excepcional y un brillo deslumbrante. Experimenta la diferencia con nuestra técnica especializada."
+			image="gelx"
+			animation="top"
+		/>
+		<Design3
+			id={3}
+			title="<span>Esmaltado Semipermanente:</span> Color Intenso, Duración Prolongada"
+			description="Dile adiós al esmalte que se desconcha rápidamente. Con nuestro esmaltado semipermanente, disfruta de colores vibrantes que permanecen impecables durante semanas. ¡Luce unas uñas impecables por más tiempo!"
+			image="esmalte"
+			animation="bottom"
+		/>
+		<Design4
+			id={4}
+			title="<span>Retiro Profesional de Acrílico y GelX:</span> Cuida tus Uñas"
+			description="Confía en nuestro equipo para eliminar suavemente el acrílico o GelX sin dañar tus uñas naturales. Deja que nuestros expertos cuiden de ti durante todo el proceso."
+			image="gelx-removal"
+			animation="top"
+		/>
+		<Design5
+			id={5}
+			title="<span>Pedicure Tradicional:</span> Cuidado Clásico para tus Pies"
+			description="Relájate y renueva tus pies con nuestro pedicure tradicional. Sumérgete en un ambiente de tranquilidad mientras nuestros profesionales se encargan de embellecer y mimar tus pies."
+			image="pedicure"
+			animation="bottom"
+		/>
+		<Design6
+			id={6}
+			title="<span>Pedicure Spa:</span> Experiencia de Relajación Total para tus Pies"
+			description="Permítenos llevar tu pedicure a un nivel superior con nuestro servicio de pedicure spa. Disfruta de un tratamiento completo que incluye exfoliación, mascarilla hidratante y masaje relajante para tus pies cansados."
+			image="spa-pedicure"
+			animation="top"
+		/>
+		<Design7
+			id={7}
+			title="<span>Pedicure Clínico:</span> Atención Especializada para Problemas de Pies"
+			description="Nuestro pedicure clínico está diseñado para abordar problemas específicos de tus pies, como callosidades, uñas encarnadas o sequedad extrema. Confía en nuestro equipo para proporcionarte alivio y soluciones efectivas."
+			image="clinic-pedicure"
+			animation="bottom"
+		/>
+		<Design1
+			id={8}
+			title="<span>Acripie:</span> Renueva tus Uñas con Cuidado Profesional"
+			description="Transforma tus uñas con nuestro servicio de acripe. Desde exfoliación hasta hidratación intensiva, mimamos tus uñas para que luzcan suaves, jóvenes y radiantes."
+			image="acripie"
+			animation="top"
+		/>
+		<Design2
+			id={9}
+			title="<span>Ext. Pestañas:</span> Mirada Impactante"
+			description="Resalta tus ojos con nuestras extensiones de pestañas. Ya sea que busques un aspecto natural o glamoroso, nuestras extensiones personalizadas te brindarán una mirada impactante y duradera."
+			image="eyelash-extensions"
+			animation="bottom"
+		/>
+		<Design3
+			id={10}
+			title="<span>Lifting + Botox:</span> Rejuvenecimiento Facial de Alta Gama"
+			description="Experimenta la magia del lifting facial combinado con la sutileza del botox para un rejuvenecimiento facial completo. Nuestros expertos en estética te ayudarán a lograr una apariencia fresca y revitalizada."
+			image="lifting-botox"
+			animation="top"
+		/>
+		<Design4
+			id={11}
+			title="<span>Depilación de Cejas:</span> Define tu Mirada con Precisión"
+			description="Dale forma a tus cejas con nuestra depilación especializada. Nuestros profesionales resaltan tus rasgos naturales con técnicas precisas y resultados impecables."
+			image="eyebrowWaxing"
+			animation="bottom"
+		/>
+		<Design5
+			id={12}
+			title="<span>Diseño de Cejas:</span> Armonía y Elegancia en Cada Arco"
+			description="Descubre la belleza de unas cejas perfectamente diseñadas. Con nuestro servicio de diseño de cejas, logra una apariencia equilibrada y definida que realza tu expresión facial."
+			image="eyebrowDesign"
+			animation="top"
+		/>
+		<Design6
+			id={13}
+			title="Alisados: Cabello Liso y Sedoso en un Instante"
+			description="Transforma tu cabello rebelde en una melena lisa y sedosa con nuestro servicio de alisado. Olvídate del frizz y disfruta de un cabello suave y manejable en todo momento."
+			image="straightening"
+			animation="bottom"
+		/>
+		<Design7
+			id={14}
+			title="<span> Masajes Relajantes:</span> Bienestar para Cuerpo y Mente"
+			description="Escapa del estrés diario con nuestros masajes relajantes. Nuestros terapeutas expertos te transportarán a un estado de relajación profunda, aliviando la tensión muscular y renovando tu energía vital."
+			image="relaxing-massages"
+			animation="top"
+		/>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="flex flex-column-sm items-center justify-between">
+				<small>&copy;Copyright. Todos los derechos reservados.</small>
+				<small
+					>Diseñado y desarrollado por <a
+						href="https://www.mrubi.dev/"
+						target="_blank">Marcos Rubí</a
+					>
+				</small>
 			</div>
-		</footer>
+		</div>
+	</footer>
 </Layout>

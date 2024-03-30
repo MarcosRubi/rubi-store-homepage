@@ -1,3 +1,20 @@
+---
+interface Props {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    animation: string;
+}
+const { id, title, description, image, animation } = Astro.props;
+
+const idToString = id.toString();
+const number = parseNumber(idToString);
+function parseNumber(number: string) {
+    return number.padStart(2, "0");
+}
+---
+
 <section class="service design-4">
     <div class="container">
         <div class="flex items-center flex-column-sm">
@@ -11,35 +28,25 @@
                             y="50%"
                             id="sm"
                             text-anchor="middle"
-                            dominant-baseline="middle">04</text
+                            dominant-baseline="middle">{number}</text
                         >
                         <text
                             x="10%"
                             y="50%"
                             id="md"
                             text-anchor="middle"
-                            dominant-baseline="middle">04</text
+                            dominant-baseline="middle">{number}</text
                         >
                     </svg></span
                 >
-                <h1>
-                    <span>Retiro Profesional de Acrílico y GelX:</span> Cuida tus
-                    Uñas
-                </h1>
-                <p>
-                    Confía en nuestro equipo para eliminar suavemente el
-                    acrílico o GelX sin dañar tus uñas naturales. Deja que
-                    nuestros expertos cuiden de ti durante todo el proceso.
-                </p>
-                <button class="btn btn-primary"
+                <h1 set:html={title} />
+                <p>{description}</p>
+                <button class="btn btn-primary" data-id={id}
                     ><span>Agregar servicio</span>
                 </button>
             </div>
-            <div class="design-4__img reveal reveal-to-top">
-                <img
-                    src="/images/services/gelx-removal.png"
-                    alt="Foto de uñas acrílicas"
-                />
+            <div class={`design-4__img reveal reveal-to-${animation}`}>
+                <img src=`/images/services/${image}.png` alt="" />
             </div>
         </div>
     </div>

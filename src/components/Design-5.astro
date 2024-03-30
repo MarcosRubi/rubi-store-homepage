@@ -1,0 +1,53 @@
+---
+interface Props {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    animation: string;
+}
+const { id, title, description, image, animation } = Astro.props;
+
+const idToString = id.toString();
+const number = parseNumber(idToString);
+function parseNumber(number: string) {
+    return number.padStart(2, "0");
+}
+---
+
+<section class="service design-5">
+    <div class="container">
+        <div class="flex justify-center items-center flex-column-sm">
+            <div
+                class="design-5__content flex flex-column items-center text-center-sm"
+            >
+                <span class="number"
+                    ><svg class="text-stroke" viewBox="0 0 500 100">
+                        <text
+                            x="50%"
+                            y="50%"
+                            id="sm"
+                            text-anchor="middle"
+                            dominant-baseline="middle">{number}</text
+                        >
+                        <text
+                            x="90%"
+                            y="50%"
+                            id="md"
+                            text-anchor="middle"
+                            dominant-baseline="middle">{number}</text
+                        >
+                    </svg></span
+                >
+                <h1 set:html={title} />
+                <p>{description}</p>
+                <button class="btn btn-primary" data-id={id}
+                    ><span>Agregar servicio</span>
+                </button>
+            </div>
+            <div class={`design-5__img reveal reveal-to-${animation}`}>
+                <img src=`/images/services/${image}.png` alt="" />
+            </div>
+        </div>
+    </div>
+</section>

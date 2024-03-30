@@ -278,17 +278,13 @@ section.service {
 .design-1,
 .design-2,
 .design-4,
-.design-5,
-.design-8,
-.design-9 {
+.design-5 {
   padding: 1rem 0;
 }
 .design-1 .flex,
 .design-2 .flex,
 .design-4 .flex,
-.design-5 .flex,
-.design-8 .flex,
-.design-9 .flex {
+.design-5 .flex {
   gap: 1rem;
 }
 
@@ -478,7 +474,7 @@ h1, p, button, .number {
 @keyframes fadein {
   from {
     opacity: 0;
-    scale: 0.75;
+    scale: 0.85;
   }
   to {
     opacity: 1;
@@ -529,14 +525,11 @@ h1, p, button, .number {
   }
   .design-1__content,
   .design-2__content,
-  .design-4__content,
-  .design-8__content,
-  .design-9__content {
+  .design-4__content {
     align-items: self-start;
   }
   .design-2 .container > div,
-  .design-5 .container > div,
-  .design-9 .container > div {
+  .design-5 .container > div {
     flex-direction: row-reverse;
   }
   .design-5__content {
@@ -610,41 +603,31 @@ h1, p, button, .number {
   }
   .design-1__content,
   .design-2__content,
-  .design-4__content,
-  .design-8__content,
-  .design-9__content {
+  .design-4__content {
     text-align: left;
   }
   .design-1__content h1,
   .design-2__content h1,
-  .design-4__content h1,
-  .design-8__content h1,
-  .design-9__content h1 {
+  .design-4__content h1 {
     position: absolute;
     top: 7.5rem;
     left: 0;
   }
   .design-1__content p,
   .design-2__content p,
-  .design-4__content p,
-  .design-8__content p,
-  .design-9__content p {
+  .design-4__content p {
     margin-top: 10rem;
   }
   .design-1__img,
   .design-2__img,
   .design-4__img,
-  .design-5__img,
-  .design-8__img,
-  .design-9__img {
+  .design-5__img {
     position: relative;
   }
   .design-1__img::after,
   .design-2__img::after,
   .design-4__img::after,
-  .design-5__img::after,
-  .design-8__img::after,
-  .design-9__img::after {
+  .design-5__img::after {
     content: "";
     position: absolute;
     top: 0;
@@ -654,18 +637,15 @@ h1, p, button, .number {
     z-index: 0;
   }
   .design-2 .number,
-  .design-5 .number,
-  .design-9 .number {
+  .design-5 .number {
     right: 0;
   }
   .design-2__content h1,
-  .design-5__content h1,
-  .design-9__content h1 {
+  .design-5__content h1 {
     left: 44%;
   }
   .design-2__img::after,
-  .design-5__img::after,
-  .design-9__img::after {
+  .design-5__img::after {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
   .design-3 .number {
@@ -693,8 +673,7 @@ h1, p, button, .number {
   .design-7 .number {
     position: relative;
   }
-  .design-1__img::after,
-  .design-8__img::after {
+  .design-1__img::after {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
   .design-5 .container > .flex {
@@ -749,46 +728,36 @@ h1, p, button, .number {
   }
   .design-1 .container > .flex,
   .design-2 .container > .flex,
-  .design-4 .container > .flex,
-  .design-8 .container > .flex,
-  .design-9 .container > .flex {
+  .design-4 .container > .flex {
     justify-content: space-between;
   }
   .design-1__content h1,
   .design-2__content h1,
-  .design-4__content h1,
-  .design-8__content h1,
-  .design-9__content h1 {
+  .design-4__content h1 {
     top: 8rem;
   }
   .design-1__content p,
   .design-2__content p,
-  .design-4__content p,
-  .design-8__content p,
-  .design-9__content p {
+  .design-4__content p {
     margin-top: 10rem;
   }
   .design-3 p {
     margin: 2rem 0;
   }
-  .design-2__img::after,
-  .design-9__img::after {
+  .design-2__img::after {
     background: none;
   }
   .design-2__content,
-  .design-5__content,
-  .design-9__content {
+  .design-5__content {
     align-items: end;
     text-align: end;
   }
   .design-2__content h1,
-  .design-5__content h1,
-  .design-9__content h1 {
+  .design-5__content h1 {
     left: 43%;
   }
   .design-2__content p,
-  .design-5__content p,
-  .design-9__content p {
+  .design-5__content p {
     margin-top: 10rem;
   }
   .design-4__content h1 {
