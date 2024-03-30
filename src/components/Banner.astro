@@ -68,34 +68,51 @@
         aria-hidden="true"
     />
 </section>
-
 <script>
-    document.addEventListener("mousemove", parallax);
+    const layers = document.querySelectorAll(".layer");
+    const banner = document.querySelector(".banner");
 
+    // Función de paralaje optimizada
     function parallax(e: MouseEvent) {
-        document.querySelectorAll(".layer").forEach((layer) => {
+        layers.forEach((layer) => {
             const speed = layer.getAttribute("data-speed");
 
             if (speed) {
-                let x = (window.innerWidth - e.pageX * parseInt(speed)) / 100;
-                let y = (window.innerHeight - e.pageY * parseInt(speed)) / 100;
+                const x = (window.innerWidth - e.pageX * parseInt(speed)) / 100;
+                const y =
+                    (window.innerHeight - e.pageY * parseInt(speed)) / 100;
 
-                let layerElement = layer as HTMLElement;
+                const layerElement = layer as HTMLElement;
                 layerElement.style.transform = `translateX(${x}px) translateY(${y}px)`;
-                layerElement.style.transition = "transform 0.1s ease-in-out";
             }
         });
     }
 
     function handleAnimationEnd() {
-        document.querySelectorAll(".layer").forEach((layer) => {
-            let layerEl = layer as HTMLElement;
-            layerEl.style.animation = "none";
+        layers.forEach((layer) => {
+            const layerElement = layer as HTMLElement;
+            layerElement.style.animation = "none";
         });
         document.addEventListener("mousemove", parallax);
     }
 
-    document
-        .querySelector(".banner")
-        ?.addEventListener("animationend", handleAnimationEnd);
+    // Función para iniciar la animación de movimiento
+    function startMoveAnimation() {
+        let cumulativeDelay = 0; // Inicializamos el retraso acumulativo
+
+        layers.forEach((layer, index) => {
+            const layerElement = layer as HTMLElement;
+            const delay = (index + 1) * 0.2; // Calculamos el retraso individual
+
+            layerElement.style.animation = `moveImages 8s ease-in-out infinite alternate`;
+            layerElement.style.animationDelay = `${cumulativeDelay + delay}s`; // Aplicamos el retraso acumulativo más el retraso individual
+            cumulativeDelay += delay; // Actualizamos el retraso acumulativo
+        });
+    }
+
+    if (window.innerWidth > 768) {
+        banner?.addEventListener("animationend", handleAnimationEnd);
+    } else {
+        banner?.addEventListener("animationend", startMoveAnimation);
+    }
 </script>

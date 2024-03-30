@@ -463,6 +463,23 @@ footer a:hover::before {
     transform: scale(1);
   }
 }
+@keyframes moveImages {
+  0% {
+    transform: translate(0rem, 0rem);
+  }
+  25% {
+    transform: translate(1rem, 0.5rem);
+  }
+  50% {
+    transform: translate(2rem, 0rem);
+  }
+  75% {
+    transform: translate(1rem, -0.5rem);
+  }
+  100% {
+    transform: translate(0rem, 0rem);
+  }
+}
 @keyframes toTop {
   from {
     transform: translateY(40px);
@@ -513,6 +530,16 @@ footer a:hover::before {
   }
   to {
     height: 0%;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    scale: 0.85;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }
 .header-menu {
@@ -601,16 +628,6 @@ h1, p, button, .number {
   animation-fill-mode: both;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-    scale: 0.85;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
 @media (min-width: 767px) {
   .header-menu .menu__list {
     width: 25vw;
