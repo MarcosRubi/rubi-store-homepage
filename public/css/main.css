@@ -612,6 +612,32 @@ h1, p, button, .number {
   }
 }
 @media (min-width: 767px) {
+  .header-menu .menu__list {
+    width: 25vw;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  .header-menu .menu__list a span {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .header-menu .menu__list a span::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transform: translate(-50%, 0%);
+    background: #ff7e7c;
+    bottom: -3px;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  .header-menu .menu__list a:hover {
+    color: var(--secondary);
+  }
+  .header-menu .menu__list a:hover span::before {
+    width: 100%;
+  }
   .banner img {
     max-width: 10rem;
   }

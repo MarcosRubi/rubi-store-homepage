@@ -149,7 +149,7 @@
             z-index: -1;
             overflow-y: scroll;
 
-            .container{
+            .container {
                 display: grid;
             }
 
@@ -159,6 +159,42 @@
 
             &.show {
                 right: 0;
+            }
+        }
+    }
+}
+
+@mixin header-767 {
+    .header-menu {
+        .menu__list {
+            width: 25vw;
+            min-width: 300px;
+            max-width: 500px;
+
+            a {
+                span{
+                    position: relative;
+                    transition: all .3s ease-in-out;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 0%;
+                        height: 2px;
+                        transform: translate(-50%, 0%);
+                        background: #ff7e7c;
+                        bottom: -3px;
+                        left: 50%;
+                        transition: all .3s ease-in-out;
+                    }
+    
+                }
+                &:hover{
+                    color: var(--secondary);
+                    span::before {
+                        width: 100%;
+                    }
+                } 
+
             }
         }
     }
