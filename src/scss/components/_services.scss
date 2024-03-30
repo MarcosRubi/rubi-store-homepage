@@ -25,6 +25,9 @@
     p {
         margin: 1rem 0;
     }
+    .buttons{
+        gap: 1rem;
+    }
 }
 
 .design-1,
@@ -72,6 +75,9 @@
     .design-2,
     .design-5 {
         .container>div {
+            flex-direction: row-reverse;
+        }
+        .buttons{
             flex-direction: row-reverse;
         }
     }

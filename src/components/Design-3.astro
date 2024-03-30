@@ -5,8 +5,9 @@ interface Props {
     description: string;
     image: string;
     animation: string;
+    sectionId: string;
 }
-const { id, title, description, image, animation } = Astro.props;
+const { id, title, description, image, animation, sectionId } = Astro.props;
 
 const idToString = id.toString();
 const number = parseNumber(idToString);
@@ -15,7 +16,7 @@ function parseNumber(number: string) {
 }
 ---
 
-<section class="service design-3">
+<section class="service design-3" id={sectionId}>
     <div class="container flex flex-column items-center text-center">
         <span class="number"
             ><svg class="text-stroke" viewBox="0 0 500 100">
@@ -37,9 +38,14 @@ function parseNumber(number: string) {
         >
         <h1 set:html={title} />
         <p>{description}</p>
-        <button class="btn btn-primary" data-id={id}
-            ><span>Agregar servicio</span>
-        </button>
+        <div class="buttons flex  flex-column-lg">
+            <button class="btn btn-primary" data-id={id}
+                ><span>Seleccionar servicio</span>
+            </button>
+            <button class="btn btn-secondary" data-id={id}
+                ><span>Remover</span>
+            </button>
+        </div>
         <div class={`w-100 design-3__img reveal reveal-to-${animation}`}>
             <img src=`/images/services/${image}.png` alt="" />
         </div>
