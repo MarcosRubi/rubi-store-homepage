@@ -203,15 +203,25 @@ section.service {
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(22.5px);
 }
+.header-menu .logo {
+  transition: transform 0.3s ease-in-out;
+}
 .header-menu .logo img {
   max-width: 5rem;
   filter: invert(1);
+}
+.header-menu .logo:hover {
+  transform: scale(1.05);
 }
 .header-menu .cart {
   padding-right: 2rem;
 }
 .header-menu .cart__icon {
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.header-menu .cart__icon:hover {
+  transform: scale(1.05);
 }
 .header-menu .cart .badge {
   display: inline-block;
@@ -223,7 +233,7 @@ section.service {
 .header-menu .cart__details {
   width: 90vw;
   max-width: 450px;
-  top: 4.5rem;
+  top: 3.5rem;
   right: 0%;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -235,10 +245,14 @@ section.service {
   transition: all 0.3s ease;
   z-index: -1;
 }
+.header-menu .cart__details #list {
+  max-height: 50vh;
+  overflow-y: auto;
+}
 .header-menu .cart__details.active {
   visibility: visible;
   opacity: 1;
-  top: 5rem;
+  top: 4rem;
 }
 .header-menu .cart__details hr {
   display: block;
@@ -698,7 +712,7 @@ footer a:hover::before {
   top: 0;
 }
 
-h1, p, button, .number {
+h1, p, section button, .number {
   animation: linear both fadein;
   animation-timeline: view();
   animation-range: entry 20% cover 30%;

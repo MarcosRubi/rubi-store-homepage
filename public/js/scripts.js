@@ -86,10 +86,20 @@ window.addEventListener('load', () => {
 
     //CARRITO
     const services = [
-        { id: 1, name: 'Uñas acrílicas', image: "image-product-1-thumbnail" },
+        { id: 1, name: 'Uñas Acrílicas', image: "image-product-1-thumbnail" },
         { id: 2, name: 'GelX', image: "image-product-1-thumbnail" },
         { id: 3, name: 'Esmaltado Semipermanente', image: "image-product-1-thumbnail" },
-        { id: 4, name: 'Retiro Profesional de Acrílico y GelX', image: "image-product-1-thumbnail" },
+        { id: 4, name: 'Retiro de Acrílico y GelX', image: "image-product-1-thumbnail" },
+        { id: 5, name: 'Pedicure Tradicional', image: "image-product-1-thumbnail" },
+        { id: 6, name: 'Pedicure Spa', image: "image-product-1-thumbnail" },
+        { id: 7, name: 'Pedicure Clínico', image: "image-product-1-thumbnail" },
+        { id: 8, name: 'Acripie', image: "image-product-1-thumbnail" },
+        { id: 9, name: 'Extensiones de Pestañas', image: "image-product-1-thumbnail" },
+        { id: 10, name: 'Lifting + Botox', image: "image-product-1-thumbnail" },
+        { id: 11, name: 'Depilación de Cejas', image: "image-product-1-thumbnail" },
+        { id: 12, name: 'Diseño de Cejas', image: "image-product-1-thumbnail" },
+        { id: 13, name: 'Alisados', image: "image-product-1-thumbnail" },
+        { id: 14, name: 'Masajes Relajantes', image: "image-product-1-thumbnail" },
     ];
     const servicesSelected = [];
     const $cartCount = document.querySelector('#cartCount');
@@ -116,11 +126,12 @@ window.addEventListener('load', () => {
         const id = parseInt(button.getAttribute('data-id'));
         const buttonText = button.querySelector('span');
 
+        if (servicesSelected.includes(id) || !services.find(service => service.id === id)) return;
+
         servicesSelected.push(id);
 
         buttonText.textContent = 'Servicio seleccionado';
         button.classList.add('selected');
-        button.style.pointerEvents = 'none';
     }
 
     function removeService(button) {
@@ -165,9 +176,9 @@ window.addEventListener('load', () => {
 
         const divInfo = document.createElement('div');
         divInfo.classList.add('cart__item__info');
-        const pInfo = document.createElement('p');
-        pInfo.textContent = name;
-        divInfo.appendChild(pInfo);
+        const spanInfo = document.createElement('span');
+        spanInfo.textContent = name;
+        divInfo.appendChild(spanInfo);
 
         const divRemove = document.createElement('div');
         divRemove.classList.add('cart__item__remove');
@@ -193,6 +204,8 @@ window.addEventListener('load', () => {
     }
 
     function removeServiceSelected(id) {
+        if (!servicesSelected.includes(id) || !services.find(service => service.id === id)) return;
+
         const index = servicesSelected.indexOf(id);
         servicesSelected.splice(index, 1);
 
@@ -203,6 +216,35 @@ window.addEventListener('load', () => {
         removeService(button)
         updateCountCart()
     }
+
+    //RESERVAR - WHATSAPP
+
+    function buildWhatsAppMessage() {
+        let message
+
+        servicesSelected.length === 0
+            ? message = "¡Hola! Me gustaría solicitar una reserva.\n"
+            : servicesSelected.length === 1
+                ? message = "¡Hola! Me gustaría hacer una reserva para el siguente servicio:\n"
+                : message = "¡Hola! Me gustaría hacer una reserva para los siguientes servicios:\n";
+
+        servicesSelected.forEach(id => {
+            const service = services.find(service => service.id === id);
+            message += `- ${service.name}\n`;
+        });
+        console.log(message)
+        return encodeURIComponent(message);
+    }
+
+    function redirectToWhatsApp() {
+        const phoneNumber = "+50375235589";
+        const message = buildWhatsAppMessage();
+        const url = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(url, "_blank");
+    }
+
+    const reserveButton = document.querySelector("#reserve");
+    reserveButton.addEventListener("click", redirectToWhatsApp);
 
     updateCountCart();
 })

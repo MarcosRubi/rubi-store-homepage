@@ -96,7 +96,7 @@
         top: 0;
     }
 }
-h1, p, button, .number{
+h1, p, section button, .number{
     animation: linear both fadein;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
