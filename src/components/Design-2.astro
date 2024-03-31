@@ -42,14 +42,9 @@ function parseNumber(number: string) {
                 >
                 <h1 set:html={title} />
                 <p>{description}</p>
-                <div class="buttons flex flex-column-lg">
-                    <button class="btn btn-primary" data-id={id}
-                        ><span>Seleccionar servicio</span>
-                    </button>
-                    <button class="btn btn-secondary" data-id={id}
-                        ><span>Remover</span>
-                    </button>
-                </div>
+                <button class="btn btn-primary" data-id={id}
+                    ><span>Seleccionar servicio</span>
+                </button>
             </div>
             <div class={`design-2__img reveal reveal-to-${animation}`}>
                 <img src=`/images/services/${image}.png` alt="" />

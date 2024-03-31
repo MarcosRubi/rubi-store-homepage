@@ -208,8 +208,10 @@ section.service {
   filter: invert(1);
 }
 .header-menu .cart {
-  cursor: pointer;
   padding-right: 2rem;
+}
+.header-menu .cart__icon {
+  cursor: pointer;
 }
 .header-menu .cart .badge {
   display: inline-block;
@@ -217,6 +219,81 @@ section.service {
   border-radius: 50%;
   text-align: center;
   padding: 0.15rem 0.5rem;
+}
+.header-menu .cart__details {
+  width: 90vw;
+  max-width: 450px;
+  top: 4.5rem;
+  right: 0%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  color: var(--bg-dark);
+  box-shadow: rgba(80, 77, 247, 0.35) 0px 5px 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+.header-menu .cart__details.active {
+  visibility: visible;
+  opacity: 1;
+  top: 5rem;
+}
+.header-menu .cart__details hr {
+  display: block;
+  margin: 1rem 0;
+  border: none;
+  height: 5px;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
+}
+.header-menu .cart__details .btn-primary {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+.header-menu .cart__details .btn-primary span {
+  color: var(--bg-dark);
+}
+.header-menu .cart__details .btn-primary:hover span {
+  color: var(--white);
+}
+.header-menu .cart__item {
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+.header-menu .cart__item__img {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.header-menu .cart__item__img img {
+  max-width: 4rem;
+}
+.header-menu .cart__item__info {
+  flex-grow: 1;
+}
+.header-menu .cart__item__info p {
+  margin-bottom: 0.5rem;
+}
+.header-menu .cart__item__info p,
+.header-menu .cart__item__info span {
+  font-size: 0.9rem;
+  color: var(--Dark-grayish-blue);
+}
+.header-menu .cart__item__info span:last-child {
+  margin-left: 0.5rem;
+}
+.header-menu .cart__item__remove .btn {
+  padding: 0.25rem 0.5rem;
+}
+.header-menu .empty {
+  min-height: 8.5rem;
+  display: grid;
+  place-content: center;
+  color: var(--Dark-grayish-blue);
+}
+.header-menu .empty p {
+  font-size: 1rem;
 }
 .header-menu .menu {
   padding: 0.5rem 0 0.5rem 1rem;
