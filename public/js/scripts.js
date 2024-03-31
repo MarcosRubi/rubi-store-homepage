@@ -132,6 +132,7 @@ window.addEventListener('load', () => {
 
         buttonText.textContent = 'Servicio seleccionado';
         button.classList.add('selected');
+        button.style.pointerEvents = 'none'
     }
 
     function removeService(button) {
