@@ -11,13 +11,50 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" >
+		<link
+			rel="shortcut icon"
+			href="/images/favicon.ico"
+			type="image/x-icon"
+		/>
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:title"
+			content="Rubí Store - Servicios de Belleza y Cuidado Personal"
+		/>
+		<meta
+			property="og:description"
+			content="Descubre nuestra variedad de servicios de belleza y cuidado personal, desde uñas acrílicas hasta tratamientos faciales rejuvenecedores. "
+		/>
+		<meta property="og:image" content="/logo.png" />
+		<meta property="og:image:width" content="373" />
+		<meta property="og:image:height" content="212" />
+		<meta
+			property="og:url"
+			content="https://rubi-store-homepage.vercel.app/"
+		/>
+		<meta
+			property="og:site_name"
+			content="Rubí Store - Servicios de Belleza y Cuidado Personal"
+		/>
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:creator" content="@RubíStore" />
+		<meta
+			name="description"
+			content="Descubre nuestra variedad de servicios de belleza y cuidado personal, desde uñas acrílicas hasta tratamientos faciales rejuvenecedores. "
+		/>
+		<meta
+			name="keywords"
+			content="Rubí Store, belleza, cuidado personal, uñas acrílicas, pedicure, tratamientos faciales, masajes relajantes, depilación, extensiones de pestañas, diseño de cejas, alisados, estética"
+		/>
+		<meta name="author" content="Rubí Store" />
+		<link rel="canonical" href="https://rubi-store-homepage.vercel.app/" />
+
 		<title>{title}</title>
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
 		<slot />
 
-		<script  src="js/scripts.js" is:inline></script>
+		<script src="js/scripts.js" is:inline></script>
 	</body>
 </html>

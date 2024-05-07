@@ -36,7 +36,7 @@ function parseNumber(number: string) {
                 >
             </svg></span
         >
-        <h1 set:html={title} />
+        <h2 set:html={title} />
         <div class="content flex flex-column-sm items-center">
             <div class="design-7__content">
                 <p>{description}</p>
@@ -45,7 +45,7 @@ function parseNumber(number: string) {
                 </button>
             </div>
             <div class={`design-7__img reveal reveal-to-${animation}`}>
-                <img src=`/images/services/${image}.png` alt="" />
+                <img src=`/images/services/${image}.webp` alt=`Imagen del servicio ${image} ` />
             </div>
         </div>
     </div>

@@ -46,13 +46,13 @@ h4 {
   font-family: "Rail", sans-serif;
 }
 
-h1 {
+h2 {
   margin: 2rem 0;
 }
-h1.title {
+h2.title {
   margin-top: 6rem;
 }
-h1 span {
+h2 span {
   color: var(--primary);
 }
 
@@ -463,7 +463,7 @@ section.service {
   position: relative;
   filter: invert(1);
 }
-.banner__content h1 {
+.banner__content span {
   font-size: 3rem;
 }
 
@@ -484,7 +484,7 @@ section.service {
 .service svg #md {
   display: none;
 }
-.service h1 {
+.service h2 {
   margin: 0;
   max-width: 30ch;
   z-index: 10;
@@ -509,9 +509,9 @@ section.service {
   gap: 1rem;
 }
 
-.design-3 h1,
-.design-6 h1,
-.design-7 h1 {
+.design-3 h2,
+.design-6 h2,
+.design-7 h2 {
   margin: 0 auto;
 }
 .design-3 img,
@@ -866,7 +866,7 @@ h1, p, section button, .number {
     position: absolute;
     top: 0;
   }
-  .service h1 {
+  .service h2 {
     font-size: 3.5rem;
   }
   .design-1__content,
@@ -874,9 +874,9 @@ h1, p, section button, .number {
   .design-4__content {
     text-align: left;
   }
-  .design-1__content h1,
-  .design-2__content h1,
-  .design-4__content h1 {
+  .design-1__content h2,
+  .design-2__content h2,
+  .design-4__content h2 {
     position: absolute;
     top: 7.5rem;
     left: 0;
@@ -908,8 +908,8 @@ h1, p, section button, .number {
   .design-5 .number {
     right: 0;
   }
-  .design-2__content h1,
-  .design-5__content h1 {
+  .design-2__content h2,
+  .design-5__content h2 {
     left: 44%;
   }
   .design-2__img::after,
@@ -925,8 +925,8 @@ h1, p, section button, .number {
     object-fit: cover;
     overflow: hidden;
   }
-  .design-4__content h1,
-  .design-5__content h1 {
+  .design-4__content h2,
+  .design-5__content h2 {
     position: absolute;
     top: 0;
     left: 60%;
@@ -994,7 +994,7 @@ h1, p, section button, .number {
     top: 10%;
     left: 57%;
   }
-  .service h1 {
+  .service h2 {
     font-size: 5rem;
   }
   .design-1 .container > .flex,
@@ -1002,9 +1002,9 @@ h1, p, section button, .number {
   .design-4 .container > .flex {
     justify-content: space-between;
   }
-  .design-1__content h1,
-  .design-2__content h1,
-  .design-4__content h1 {
+  .design-1__content h2,
+  .design-2__content h2,
+  .design-4__content h2 {
     top: 8rem;
   }
   .design-1__content p,
@@ -1023,15 +1023,15 @@ h1, p, section button, .number {
     align-items: end;
     text-align: end;
   }
-  .design-2__content h1,
-  .design-5__content h1 {
+  .design-2__content h2,
+  .design-5__content h2 {
     left: 43%;
   }
   .design-2__content p,
   .design-5__content p {
     margin-top: 10rem;
   }
-  .design-4__content h1 {
+  .design-4__content h2 {
     top: 0;
   }
   h1.title {
